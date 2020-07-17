@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 0%, 98%);
+    height: 100vh;
+}
+header{
+    margin: 50px auto; /* this is so that it goes at the center */
+    max-width: 500px;
+    text-align: center;
+}
+h1{
+    font-weight: 200;
+    margin: 0;
+    text-align: justify;
+
+}
+h1 span{
+    font-weight: 600;
+    text-align: justify;
+    
+
+}
+p{
+    color: hsl(229, 6%, 66%);
+    margin-bottom: 0;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width:1140px;
+    margin: 0 auto;
+    justify-content: center;
+}
+.box{
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.23), 0 6px 6px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin: 15px;
+    width: 350px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.box-push{
+    transform: translateY(50%);
+}
+.box h2{
+    margin: 0;
+}
+.box img{
+    display: grid;
+    margin-left: auto;
+}
+.box p{
+ 
+    margin: 15px 0 30px;
+}
+.box::after {
+    content:'';
+    background-color: purple;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:5px;
+    width: 100%;
+}
+.box-blue::after{
+    background-color: hsl(212, 86%, 64%);
+}
+.box-red::after{
+    background-color: hsl(0, 78%, 62%);
+}
+.box-cyan::after{
+    background-color: hsl(180, 62%, 55%);
+}
+.box-orange::after{
+    background-color: hsl(34, 97%, 64%);
+}
+footer{
+    text-align: center;
+    
+}
+footer a{
+    text-decoration: none;
+}
+@media (max-width:775px){
+    .box-push{
+        transform: translateY(0);
+    }
+}
